@@ -137,14 +137,21 @@ body {
     color: #b0d9d5;
 }
 
+/* *** STILE BOTTONE MODIFICATO *** */
 #add-user-btn {
     background-color: #25D366;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 5px 8px;
+    font-size: 12px;
+    margin-top: 2px;
+    transition: background-color 0.2s;
+}
+
+#add-user-btn:hover {
+    background-color: #1DAE55;
 }
 
 #contact-list-container {
