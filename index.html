@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulatore Chat Multi-Utente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="profile-editor main-user-editor">
+                <label for="user1-pic-input">
+                    <img id="user1-pic" src="https://via.placeholder.com/40/dcf8c6/000000?text=Tu" alt="User 1" class="profile-pic">
+                </label>
+                <input type="file" id="user1-pic-input" accept="image/*">
+                <input type="text" id="user1-name" class="profile-name-input" value="Tu">
+                <input type="text" id="user1-url-input" class="profile-url-input" placeholder="URL Immagine...">
+            </div>
+            
+            <div class="chat-title">
+                <h2>Simulatore Chat</h2>
+                <button id="save-pdf-btn" title="Salva chat come PDF">
+                    <i class="fas fa-file-pdf"></i>
+                </button>
+            </div>
+
+            <div class="contacts-manager">
+                <div id="add-user-form">
+                    <input type="text" id="new-user-name" placeholder="Nome contatto">
+                    <input type="text" id="new-user-url" placeholder="URL Img Profilo">
+                    <button id="add-user-btn" title="Aggiungi Contatto">+</button>
+                </div>
+                <div id="contact-list-container">
+                    <strong>Contatti:</strong>
+                    <div id="contact-list">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-input-area">
+            <div class="emoji-picker" id="emoji-picker"></div>
+            <button class="input-button" id="emoji-btn">😀</button>
+            <label for="image-input" class="input-button attach-label">📎</label>
+            <input type="file" id="image-input" accept="image/*">
+            
+            <textarea id="message-input" placeholder="Scrivi un messaggio..." rows="1"></textarea>
+            
+            <select id="sender-selector" title="Scegli chi invia il messaggio">
+                </select>
+            
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+
+        <div class="chat-window" id="chat-window">
+            <div class="message received">
+                <div class="message-profile-pic">
+                    <img src="https://via.placeholder.com/40/ffffff/000000?text=C1" alt="Profile Pic">
+                </div>
+                <div class="message-content">
+                    <p>Ora puoi aggiungere nuovi contatti e scegliere chi scrive!</p>
+                    <div class="message-time">10:30</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
